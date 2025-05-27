@@ -1,62 +1,119 @@
-# PyQt5 GUI 控制
 # gui.py
 from PyQt5.QtWidgets import (
-    QApplication, QWidget, QVBoxLayout, QLabel, QLineEdit,
-    QPushButton, QMessageBox
+    QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
+    QPushButton, QMessageBox, QTabWidget, QListWidget
 )
-
-from reminder import add_interval_reminder
-from scheduler import ReminderScheduler
+from PyQt5.QtGui import QIntValidator
+from PyQt5.QtCore import Qt
+from reminder import add_interval_reminder, add_daily_reminder
 
 class ReminderGUI(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("定时提醒工具")
-        self.setFixedSize(300, 180)
-
-        self.scheduler = ReminderScheduler()
+        self.setFixedSize(400, 360)
         self.setup_ui()
 
     def setup_ui(self):
-        layout = QVBoxLayout()
+        main_layout = QVBoxLayout()
+        main_layout.setContentsMargins(10, 10, 10, 10)
+        main_layout.setSpacing(10)
 
-        self.label1 = QLabel("每隔几分钟提醒：")
+        # 顶部选项卡
+        self.tabs = QTabWidget()
+
+        # Tab1: 间隔提醒
+        self.interval_tab = QWidget()
+        interval_layout = QVBoxLayout()
+        interval_layout.setSpacing(8)
+        interval_layout.addWidget(QLabel("每隔几分钟提醒："))
         self.input_minutes = QLineEdit()
+        self.input_minutes.setValidator(QIntValidator(1, 1440, self))
         self.input_minutes.setPlaceholderText("例如 30")
-
-        self.label2 = QLabel("提醒内容：")
+        interval_layout.addWidget(self.input_minutes)
+        interval_layout.addWidget(QLabel("提醒内容："))
         self.input_message = QLineEdit()
         self.input_message.setPlaceholderText("例如：起来活动一下~")
+        interval_layout.addWidget(self.input_message)
+        self.add_interval_btn = QPushButton("添加间隔提醒")
+        self.add_interval_btn.clicked.connect(self.on_add_interval_clicked)
+        interval_layout.addWidget(self.add_interval_btn)
+        # 单独展示间隔提醒任务
+        interval_layout.addWidget(QLabel("间隔提醒列表："))
+        self.interval_list = QListWidget()
+        interval_layout.addWidget(self.interval_list)
+        self.interval_tab.setLayout(interval_layout)
 
-        self.button = QPushButton("添加提醒")
-        self.button.clicked.connect(self.on_add_interval_clicked)
+        # Tab2: 每日提醒
+        self.daily_tab = QWidget()
+        daily_layout = QVBoxLayout()
+        daily_layout.setSpacing(8)
+        time_layout = QHBoxLayout()
+        time_layout.setSpacing(5)
+        time_layout.addStretch(1)
+        self.input_hour = QLineEdit()
+        self.input_hour.setValidator(QIntValidator(0, 23, self))
+        self.input_hour.setFixedWidth(50)
+        self.input_hour.setPlaceholderText("08")
+        time_layout.addWidget(self.input_hour)
+        colon = QLabel(":")
+        colon.setFixedWidth(10)
+        colon.setAlignment(Qt.AlignCenter)
+        time_layout.addWidget(colon)
+        self.input_minute = QLineEdit()
+        self.input_minute.setValidator(QIntValidator(0, 59, self))
+        self.input_minute.setFixedWidth(50)
+        self.input_minute.setPlaceholderText("00")
+        time_layout.addWidget(self.input_minute)
+        time_layout.addStretch(1)
+        daily_layout.addLayout(time_layout)
+        daily_layout.addWidget(QLabel("提醒内容："))
+        self.daily_message = QLineEdit()
+        self.daily_message.setPlaceholderText("例如：早餐时间~")
+        daily_layout.addWidget(self.daily_message)
+        self.add_daily_btn = QPushButton("添加每日提醒")
+        self.add_daily_btn.clicked.connect(self.on_add_daily_clicked)
+        daily_layout.addWidget(self.add_daily_btn)
+        # 单独展示每日提醒任务
+        daily_layout.addWidget(QLabel("每日提醒列表："))
+        self.daily_list = QListWidget()
+        daily_layout.addWidget(self.daily_list)
+        self.daily_tab.setLayout(daily_layout)
 
-        layout.addWidget(self.label1)
-        layout.addWidget(self.input_minutes)
-        layout.addWidget(self.label2)
-        layout.addWidget(self.input_message)
-        layout.addWidget(self.button)
+        # 添加 tabs
+        self.tabs.addTab(self.interval_tab, "间隔提醒")
+        self.tabs.addTab(self.daily_tab, "每日提醒")
+        main_layout.addWidget(self.tabs)
 
-        self.setLayout(layout)
+        self.setLayout(main_layout)
 
-#获取用户输入，调用 add_interval_reminder
     def on_add_interval_clicked(self):
-        try:
-            interval = int(self.input_minutes.text())
-            message = self.input_message.text()
+        interval = self.input_minutes.text().strip()
+        message = self.input_message.text().strip()
+        if not interval or not message:
+            QMessageBox.warning(self, "错误", "请填写有效的提醒内容和时间间隔")
+            return
+        minutes = int(interval)
+        job_id = add_interval_reminder(minutes, message)
+        self.interval_list.addItem(f"[{job_id}] 间隔 {minutes} 分钟：{message}")
+        QMessageBox.information(self, "成功", f"已添加每 {minutes} 分钟提醒一次：{message}")
 
-            if interval <= 0 or not message:
-                QMessageBox.warning(self, "错误", "请填写有效的提醒内容和时间间隔")
-                return
+    def on_add_daily_clicked(self):
+        hour_str = self.input_hour.text().strip()
+        minute_str = self.input_minute.text().strip()
+        message = self.daily_message.text().strip()
+        if not hour_str or not minute_str or not message:
+            QMessageBox.warning(self, "错误", "请填写有效的时间和提醒内容")
+            return
+        hour = int(hour_str)
+        minute = int(minute_str)
+        job_id = add_daily_reminder(hour, minute, message)
+        self.daily_list.addItem(f"[{job_id}] 每天 {hour:02d}:{minute:02d}：{message}")
+        QMessageBox.information(self, "成功", f"已添加每天 {hour:02d}:{minute:02d} 提醒：{message}")
 
-            # 只调用scheduler的接口添加任务
-            job_id = self.scheduler.add_interval_job(interval, message)
-            print(f"添加了间隔提醒任务，任务ID: {job_id}")
-
-            QMessageBox.information(self, "成功", f"已添加每 {interval} 分钟提醒一次：{message}")
-
-        except ValueError:
-            QMessageBox.warning(self, "错误", "请输入有效的数字作为时间间隔")
-        except Exception as e:
-            print(f"[错误] 添加提醒失败：{e}")
-            QMessageBox.warning(self, "错误", "添加提醒时发生错误，请检查输入。")
+if __name__ == "__main__":
+    import sys
+    app = QApplication(sys.argv)
+    window = ReminderGUI()
+    window.show()
+    sys.exit(app.exec_())
