@@ -1,45 +1,79 @@
-from PyQt5.QtCore import QTimer
-import subprocess
+# qt_scheduler.py
+from PyQt5.QtCore import QTimer, QDateTime
+from notifier import show_notification
 import time
 
-class QtReminderScheduler:
-    def __init__(self):
-        self.jobs = {}  # job_id: QTimer
+class PollingScheduler:
+    def __init__(self, interval_ms=1000):
+        # task 格式：
+        #   {'id': job_id, 'type':'interval','interval':60,'last':timestamp,'title':..., 'msg':...}
+        #   {'id': job_id, 'type':'daily',   'hour':8, 'minute':0, 'last_date': 'YYYY-MM-DD', 'title':..., 'msg':...}
+        self.tasks = {}
+        self.timer = QTimer()
+        self.timer.setInterval(interval_ms)
+        self.timer.timeout.connect(self._tick)
 
-    def add_interval_job(self, minutes: int, title: str, message: str) -> str:
+    def start(self):
+        self.timer.start()
+
+    def add_interval(self, minutes, title, message):
         job_id = f"interval_{int(time.time())}"
-        timer = QTimer()
-        timer.setInterval(minutes * 60 * 1000)  # 转毫秒
-        timer.timeout.connect(lambda: self._trigger_notification(title, message))
-        timer.start()
-        self.jobs[job_id] = timer
+        self.tasks[job_id] = {
+            'type':'interval',
+            'interval': minutes*15,#TODO TEST
+            'last': time.time(),
+            'title': title,
+            'msg': message
+        }
         return job_id
 
-    def add_daily_job(self, hour: int, minute: int, title: str, message: str) -> str:
-        from datetime import datetime, timedelta
-
+    def add_daily(self, hour, minute, title, message):
         job_id = f"daily_{hour:02d}{minute:02d}_{int(time.time())}"
-
-        def schedule_next():
-            now = datetime.now()
-            target = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
-            if target <= now:
-                target += timedelta(days=1)
-            delta_ms = int((target - now).total_seconds() * 1000)
-
-            timer = QTimer()
-            timer.setSingleShot(True)
-            timer.setInterval(delta_ms)
-            timer.timeout.connect(lambda: trigger_and_reschedule())
-            timer.start()
-            self.jobs[job_id] = timer
-
-        def trigger_and_reschedule():
-            self._trigger_notification(title, message)
-            schedule_next()
-
-        schedule_next()
+        today = QDateTime.currentDateTime().toString("yyyy-MM-dd")
+        self.tasks[job_id] = {
+            'type':'daily',
+            'hour': hour,
+            'minute': minute,
+            'last_date': today,
+            'title': title,
+            'msg': message
+        }
         return job_id
 
-    def _trigger_notification(self, title, message):
-        subprocess.Popen(["python", "notifier.py", title, message])
+    def remove(self, job_id):
+        self.tasks.pop(job_id, None)
+
+    t0 = time.perf_counter()#DEBUG
+
+    def _tick(self):
+        now = time.time()
+        print(f"[Scheduler Tick] tasks={list(self.tasks.keys())}")  # 打印当前所有任务#DEBUG
+        today_str = QDateTime.currentDateTime().toString("yyyy-MM-dd")
+        for job_id, task in list(self.tasks.items()):
+            print(f"  Checking {job_id}: {task}")
+            if task['type']=='interval':
+                if now - task['last'] >= task['interval']:
+                    show_notification(task['title'], task['msg'])
+                    task['last'] = now
+            else:  # daily
+                # 如果日期变了或者刚好是指定时分
+                dt = QDateTime.currentDateTime()
+                if dt.toString("yyyy-MM-dd") != task['last_date']:
+                    # 新的一天，重置
+                    task['last_date'] = dt.toString("yyyy-MM-dd")
+                if dt.time().hour() == task['hour'] and dt.time().minute() == task['minute']:
+                    # 当分钟第一次到达时触发
+                    show_notification(task['title'], task['msg'])
+                    # 防止同一分钟内重复
+                    task['minute'] = task['minute']  # nothing, but last_date already updated#DEBUG
+
+    print("Tick 耗时:", time.perf_counter() - t0)#DEBUG
+
+scheduler = None
+
+def init_scheduler(interval_ms=1000):
+    global scheduler
+    if scheduler is None:
+        scheduler = PollingScheduler(interval_ms)
+        scheduler.start()
+    return scheduler
