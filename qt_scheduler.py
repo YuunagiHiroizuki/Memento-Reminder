@@ -16,19 +16,21 @@ class PollingScheduler:
     def start(self):
         self.timer.start()
 
-    def add_interval(self, minutes, title, message):
-        job_id = f"interval_{int(time.time())}"
+    def add_interval(self, minutes, title, message, job_id=None):
+        if job_id is None:
+            job_id = f"interval_{int(time.time())}"
         self.tasks[job_id] = {
             'type':'interval',
-            'interval': minutes*15,#TODO TEST
+            'interval': minutes*15,#TODO TEST minutes*60
             'last': time.time(),
             'title': title,
             'msg': message
         }
         return job_id
 
-    def add_daily(self, hour, minute, title, message):
-        job_id = f"daily_{hour:02d}{minute:02d}_{int(time.time())}"
+    def add_daily(self, hour, minute, title, message, job_id=None):
+        if job_id is None:
+            job_id = f"daily_{hour:02d}{minute:02d}_{int(time.time())}"
         today = QDateTime.currentDateTime().toString("yyyy-MM-dd")
         self.tasks[job_id] = {
             'type':'daily',
