@@ -6,7 +6,7 @@ from winotify import Notification
 
 def show_notification(title: str, message: str):
     toast = Notification(
-        app_id="Reminder",
+        app_id="Memento",
         title=title,
         msg=message,
         duration="short"

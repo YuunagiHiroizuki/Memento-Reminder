@@ -1,15 +1,18 @@
+import sys
+
 from PyQt5.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
-    QPushButton, QMessageBox, QTabWidget, QListWidget, QListWidgetItem
+    QPushButton, QMessageBox, QTabWidget, QListWidget, QListWidgetItem, QDialog, QCheckBox
 )
 from PyQt5.QtGui import QIntValidator
 from PyQt5.QtCore import Qt
+import winreg
 
 class ReminderGUI(QWidget):
     def __init__(self, mgr):
         super().__init__()
         self.mgr = mgr  # ReminderManager instance
-        self.setWindowTitle("定时提醒工具")
+        self.setWindowTitle("Memento")
         self.setFixedSize(400, 450)
         self.editing_interval_id = None
         self.editing_daily_id = None
@@ -110,8 +113,24 @@ class ReminderGUI(QWidget):
         daily_layout.addLayout(btn2)
         self.daily_tab.setLayout(daily_layout)
 
+        #setting
+        self.setting_tab = QWidget()
+        layout = QVBoxLayout()
+        # 创建复选框
+        self.auto_start_checkbox = QCheckBox("开机启动")
+
+        layout.addWidget(self.auto_start_checkbox, alignment=Qt.AlignLeft | Qt.AlignTop)
+        # 设置复选框状态
+        self.auto_start_checkbox.setChecked(self.is_auto_start_enabled())
+        # 状态改变自动保存
+        self.auto_start_checkbox.stateChanged.connect(self.on_auto_start_changed)
+
+        self.setting_tab.setLayout(layout)
+
+
         self.tabs.addTab(self.interval_tab, "间隔提醒")
         self.tabs.addTab(self.daily_tab, "每日提醒")
+        self.tabs.addTab(self.setting_tab, "设置")
         main_layout.addWidget(self.tabs)
         self.setLayout(main_layout)
 
@@ -226,3 +245,34 @@ class ReminderGUI(QWidget):
             if it.data(Qt.UserRole)==rid:
                 it.setText(text)
                 return
+
+    def show_settings(self):
+        self.settings_dialog.exec_()
+
+    def closeEvent(self, event):
+        event.ignore()
+        self.hide()
+
+    def is_auto_start_enabled(self):
+        try:
+            key = winreg.OpenKey(winreg.HKEY_CURRENT_USER,
+                                 r"Software\Microsoft\Windows\CurrentVersion\Run",
+                                 0, winreg.KEY_READ)
+            val, _ = winreg.QueryValueEx(key, "ReminderApp")
+            return True
+        except FileNotFoundError:
+            return False
+
+    def on_auto_start_changed(self, state):
+        exe_path = sys.executable
+        try:
+            key = winreg.OpenKey(winreg.HKEY_CURRENT_USER,
+                                 r"Software\Microsoft\Windows\CurrentVersion\Run",
+                                 0, winreg.KEY_SET_VALUE)
+            if state == 2:  # Checked
+                winreg.SetValueEx(key, "ReminderApp", 0, winreg.REG_SZ, exe_path)
+            else:
+                winreg.DeleteValue(key, "ReminderApp")
+        except FileNotFoundError:
+            # 如果要删除的值不存在，忽略即可
+            pass
