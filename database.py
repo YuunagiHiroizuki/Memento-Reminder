@@ -6,7 +6,7 @@ import uuid
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 os.makedirs(DATA_DIR, exist_ok=True)
-DB_FILE = os.path.join(DATA_DIR, "reminders.db")
+DB_FILE = os.path.join(DATA_DIR, "memento.db")
 
 def get_connection():
     return sqlite3.connect(DB_FILE)

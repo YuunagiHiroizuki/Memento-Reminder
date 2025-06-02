@@ -11,11 +11,9 @@ class ReminderManager:
         self.sched = init_scheduler()
 
     def schedule_interval(self, rid, minutes, title, message):
-        job_id = self.sched.add_interval(minutes, title, message)
         return self.sched.add_interval(minutes, title, message, job_id=rid)
 
     def schedule_daily(self, rid, hour, minute, title, message):
-        job_id = self.sched.add_daily(hour, minute, title, message)
         return self.sched.add_daily(hour, minute, title, message, job_id=rid)
 
     def add_interval(self, title, message, minutes):

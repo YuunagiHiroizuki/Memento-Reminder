@@ -10,15 +10,24 @@ def remove_startup_registry_entry():
             r"Software\Microsoft\Windows\CurrentVersion\Run",
             0, winreg.KEY_SET_VALUE
         )
-        winreg.DeleteValue(key, "ReminderApp")
+        winreg.DeleteValue(key, "Memento")
         print("✅ 启动项已从注册表中删除。")
     except FileNotFoundError:
         print("ℹ️ 注册表中未找到启动项，无需删除。")
     except Exception as e:
         print(f"❌ 删除注册表启动项失败: {e}")
 
+def get_actual_exe_dir():
+    if getattr(sys, 'frozen', False):
+        # 被 PyInstaller 打包后的路径
+        return os.path.dirname(sys.executable)
+    else:
+        # 正常运行 .py 脚本时
+        return os.path.abspath(os.path.dirname(__file__))
+
+
 def confirm_and_delete_dir():
-    current_dir = os.path.abspath(os.path.dirname(__file__))
+    current_dir = get_actual_exe_dir()
     print(f"📂 当前程序目录为：\n  {current_dir}")
     confirm = input("⚠️ 确认删除该目录及其所有内容？(yes/no): ").strip().lower()
     if confirm == "y":

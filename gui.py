@@ -1,12 +1,11 @@
 import sys
-
+import winreg
 from PyQt5.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
     QPushButton, QMessageBox, QTabWidget, QListWidget, QListWidgetItem, QDialog, QCheckBox
 )
 from PyQt5.QtGui import QIntValidator
 from PyQt5.QtCore import Qt
-import winreg
 
 class ReminderGUI(QWidget):
     def __init__(self, mgr):
@@ -258,7 +257,7 @@ class ReminderGUI(QWidget):
             key = winreg.OpenKey(winreg.HKEY_CURRENT_USER,
                                  r"Software\Microsoft\Windows\CurrentVersion\Run",
                                  0, winreg.KEY_READ)
-            val, _ = winreg.QueryValueEx(key, "ReminderApp")
+            val, _ = winreg.QueryValueEx(key, "Memento")
             return True
         except FileNotFoundError:
             return False
@@ -270,9 +269,9 @@ class ReminderGUI(QWidget):
                                  r"Software\Microsoft\Windows\CurrentVersion\Run",
                                  0, winreg.KEY_SET_VALUE)
             if state == 2:  # Checked
-                winreg.SetValueEx(key, "ReminderApp", 0, winreg.REG_SZ, exe_path)
+                winreg.SetValueEx(key, "Memento", 0, winreg.REG_SZ, exe_path)
             else:
-                winreg.DeleteValue(key, "ReminderApp")
+                winreg.DeleteValue(key, "Memento")
         except FileNotFoundError:
             # 如果要删除的值不存在，忽略即可
             pass

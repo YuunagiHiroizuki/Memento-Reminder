@@ -1,6 +1,8 @@
 # 程序入口
 import os
 import sys
+
+from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication
 
 from database import load_all, init_db
@@ -38,7 +40,9 @@ if __name__ == "__main__":
     init_scheduler(interval_ms=1000)    #初始化并启动定时器
     mgr = ReminderManager()
     window = ReminderGUI(mgr)
-    icon_path = os.path.join(os.path.dirname(__file__), 'icon', 'icon.png')
+    icon_path = os.path.join(os.path.dirname(__file__), 'icon', 'memento.ico')
     tray = SystemTray(icon_path=icon_path, parent_window=window)
+    icon_path_2 = os.path.join(os.path.dirname(__file__), 'icon', 'memento_dark.ico')
+    window.setWindowIcon(QIcon(icon_path_2))
     window.show()
     sys.exit(app.exec_())

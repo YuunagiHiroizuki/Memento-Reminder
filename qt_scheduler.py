@@ -21,7 +21,7 @@ class PollingScheduler:
             job_id = f"interval_{int(time.time())}"
         self.tasks[job_id] = {
             'type':'interval',
-            'interval': minutes*15,#TODO TEST minutes*60
+            'interval': minutes*60,
             'last': time.time(),
             'title': title,
             'msg': message
@@ -37,6 +37,7 @@ class PollingScheduler:
             'hour': hour,
             'minute': minute,
             'last_date': today,
+            'triggered_today': False,
             'title': title,
             'msg': message
         }
@@ -58,16 +59,20 @@ class PollingScheduler:
                     show_notification(task['title'], task['msg'])
                     task['last'] = now
             else:  # daily
-                # 如果日期变了或者刚好是指定时分
                 dt = QDateTime.currentDateTime()
-                if dt.toString("yyyy-MM-dd") != task['last_date']:
-                    # 新的一天，重置
-                    task['last_date'] = dt.toString("yyyy-MM-dd")
-                if dt.time().hour() == task['hour'] and dt.time().minute() == task['minute']:
-                    # 当分钟第一次到达时触发
+                current_hour = dt.time().hour()
+                current_minute = dt.time().minute()
+                today_str = dt.toString("yyyy-MM-dd")
+
+                if task['last_date'] != today_str:
+                    # 新的一天，重置触发标志
+                    task['last_date'] = today_str
+                    task['triggered_today'] = False
+
+                if (current_hour == task['hour'] and current_minute == task['minute']
+                        and not task.get('triggered_today', False)):
                     show_notification(task['title'], task['msg'])
-                    # 防止同一分钟内重复
-                    task['minute'] = task['minute']  # nothing, but last_date already updated#DEBUG
+                    task['triggered_today'] = True
 
     print("Tick 耗时:", time.perf_counter() - t0)#DEBUG
 

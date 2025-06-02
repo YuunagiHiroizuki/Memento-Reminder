@@ -9,13 +9,13 @@ def show_notification(title: str, message: str):
         app_id="Memento",
         title=title,
         msg=message,
-        duration="short"
+        duration="short",
     )
     toast.show()
 
     try:
         base_dir = os.path.dirname(os.path.abspath(__file__))
-        sound_path = os.path.join(base_dir, "sounds", "alert.wav")
+        sound_path = os.path.join(base_dir, "sounds", "reminder.wav")
         if os.path.exists(sound_path):
             winsound.PlaySound(sound_path, winsound.SND_FILENAME)
         else:

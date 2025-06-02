@@ -1,9 +1,18 @@
 # 📝 Memento — 定时提醒工具
-
+ pyinstaller main.py --name Memento --noconfirm --windowed --icon=icon/memento.ico --add-data "icon/memento.ico;icon" --add-data "sounds/reminder.wav;sounds" --add-data "data/memento.db;data"
+没打包好，TODO的测试用计时忘改了，而且打包后还没有unistall.py得自己加进去
 ## 🎯 项目简介
-本项目是一个用于定时提醒用户休息的工具，目标是在不打扰用户当前工作的前提下，通过 Windows 消息中心或系统托盘提醒长时间坐在电脑前的用户起身活动。项目采用 Python 开发，使用 PyQt5 构建 GUI，QtScheduler + QTimer 实现定时任务调度，提醒信息持久化保存至 JSON 文件。
+本项目是一个用于定时提醒用户休息的工具，目标是在不打扰用户当前工作的前提下，通过 Windows 消息中心或系统托盘提醒长时间坐在电脑前的用户起身活动。项目采用 Python 开发，使用 PyQt5 构建 GUI， QTimer 实现定时任务调度，提醒信息持久化保存至 JSON 文件。
 
 ---
+
+✅ 项目依赖（requirements.txt）
+txt
+复制
+编辑
+PyQt5>=5.15
+winotify>=0.2
+APScheduler>=3.10
 
 ## 🔧 技术栈与依赖
 
@@ -15,7 +24,9 @@
   - `matplotlib`（可选）：数据可视化
 - **数据持久化**：JSON 文件（必要，课程要求）
 - **可选**：SQLite（若转为复杂查询或待办事项管理）
-
+# 项目未来规划
+- 若引入更多可自定义设置项（如通知音、界面主题等），将采用 `settings.json` 存储配置。
+- 使用QTDesigner设计更简约现代的界面
 ---
 
 ## ✅ 主要功能一览（优先级标记）

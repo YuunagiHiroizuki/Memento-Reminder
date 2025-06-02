@@ -10,7 +10,7 @@ class SystemTray(QSystemTrayIcon):
 
         # 加载图标
         base_dir = os.path.dirname(os.path.abspath(__file__))
-        icon_path = os.path.join(base_dir, "icon", "icon.png")
+        icon_path = os.path.join(base_dir, "icon", "memento.ico")
         self.setIcon(QIcon(icon_path))
 
         # 菜单
