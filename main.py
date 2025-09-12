@@ -11,6 +11,12 @@ from gui import ReminderGUI
 from reminder import ReminderManager
 from tray import SystemTray
 
+def resource_path(relative_path):
+    ##获取资源路径
+    if hasattr(sys, '_MEIPASS'):
+        return os.path.join(sys._MEIPASS, relative_path)
+    return os.path.join(os.path.abspath("."), relative_path)
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 
@@ -40,9 +46,9 @@ if __name__ == "__main__":
     init_scheduler(interval_ms=1000)    #初始化并启动定时器
     mgr = ReminderManager()
     window = ReminderGUI(mgr)
-    icon_path = os.path.join(os.path.dirname(__file__), 'icon', 'memento.ico')
+    icon_path = resource_path('icon/memento.ico')
     tray = SystemTray(icon_path=icon_path, parent_window=window)
-    icon_path_2 = os.path.join(os.path.dirname(__file__), 'icon', 'memento_dark.ico')
+    icon_path_2 = resource_path('icon/memento_dark.ico')
     window.setWindowIcon(QIcon(icon_path_2))
     window.show()
     sys.exit(app.exec_())

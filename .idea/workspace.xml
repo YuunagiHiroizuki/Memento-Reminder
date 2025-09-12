@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="32ee73f9-cab5-42fb-98fb-d87a7560828a" name="更改" comment="7、项目名字修改(修复了一些小BUG)">
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2xcS0cIEx806MTGfa6Ogs1kp4ji" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.notifier.executor&quot;: &quot;Run&quot;,
+    &quot;Python.reminder.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_auto_start.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_db.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_notify (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_notify.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_uninstall.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tool.executor&quot;: &quot;Run&quot;,
+    &quot;Python.uninstall.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Documents\Memento" />
+      <recent name="E:\Documents\Reminder\icon" />
+      <recent name="E:\Documents\Reminder\data" />
+      <recent name="E:\Documents\Reminder\test" />
+      <recent name="E:\Documents\Reminder" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python" show_console_on_std_err="true" show_console_on_std_out="true">
+      <module name="Memento" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.13" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true" show_console_on_std_err="true" show_console_on_std_out="true">
+      <module name="Memento" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.13" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_auto_start" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true" show_console_on_std_err="true" show_console_on_std_out="true">
+      <module name="Memento" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.13" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_auto_start.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_db" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true" show_console_on_std_err="true" show_console_on_std_out="true">
+      <module name="Memento" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.13" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_db.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_notify" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true" show_console_on_std_err="true" show_console_on_std_out="true">
+      <module name="Memento" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.13" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_notify.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_uninstall" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true" show_console_on_std_err="true" show_console_on_std_out="true">
+      <module name="Memento" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.13" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_uninstall.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tool" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true" show_console_on_std_err="true" show_console_on_std_out="true">
+      <module name="Memento" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.13" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/icon" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/icon/tool.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.tool" />
+      <item itemvalue="Python.test_auto_start" />
+      <item itemvalue="Python.test_uninstall" />
+      <item itemvalue="Python.test_db" />
+      <item itemvalue="Python.test_notify" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test_uninstall" />
+        <item itemvalue="Python.test_auto_start" />
+        <item itemvalue="Python.test_db" />
+        <item itemvalue="Python.test_notify" />
+        <item itemvalue="Python.tool" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-PY-251.25410.159" />
+        <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="32ee73f9-cab5-42fb-98fb-d87a7560828a" name="更改" comment="" />
+      <created>1748235648213</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1748235648213</updated>
+      <workItem from="1748235649677" duration="1338000" />
+      <workItem from="1748247578418" duration="8628000" />
+      <workItem from="1748263153337" duration="5086000" />
+      <workItem from="1748340860423" duration="29000" />
+      <workItem from="1748351184391" duration="3565000" />
+      <workItem from="1748354948390" duration="419000" />
+      <workItem from="1748442083267" duration="7133000" />
+      <workItem from="1748452420261" duration="311000" />
+      <workItem from="1748482630264" duration="9500000" />
+      <workItem from="1748496314029" duration="654000" />
+      <workItem from="1748505352617" duration="8680000" />
+      <workItem from="1748529742617" duration="4294000" />
+      <workItem from="1748585789419" duration="1676000" />
+      <workItem from="1748597978580" duration="7242000" />
+      <workItem from="1748612929469" duration="695000" />
+      <workItem from="1748613650853" duration="1416000" />
+      <workItem from="1748654532243" duration="8761000" />
+      <workItem from="1748666330815" duration="712000" />
+      <workItem from="1748681453407" duration="96000" />
+      <workItem from="1748871766896" duration="6127000" />
+      <workItem from="1748878007883" duration="68000" />
+      <workItem from="1748878307182" duration="429000" />
+      <workItem from="1748878761095" duration="1253000" />
+      <workItem from="1748880781909" duration="2386000" />
+      <workItem from="1748883213503" duration="159000" />
+      <workItem from="1748916433458" duration="887000" />
+      <workItem from="1748917461473" duration="96000" />
+      <workItem from="1748917712246" duration="2828000" />
+      <workItem from="1749032612065" duration="825000" />
+      <workItem from="1749043757097" duration="1424000" />
+      <workItem from="1749045823178" duration="747000" />
+      <workItem from="1749046818277" duration="750000" />
+      <workItem from="1749047814711" duration="953000" />
+      <workItem from="1749048794312" duration="2332000" />
+      <workItem from="1749051949868" duration="1396000" />
+      <workItem from="1749367124031" duration="1170000" />
+      <workItem from="1749368340624" duration="468000" />
+      <workItem from="1749486449352" duration="525000" />
+      <workItem from="1749974450656" duration="654000" />
+      <workItem from="1749975178938" duration="2814000" />
+      <workItem from="1749978067686" duration="13000" />
+      <workItem from="1749978231073" duration="1954000" />
+      <workItem from="1750319938807" duration="2275000" />
+      <workItem from="1750322640161" duration="21000" />
+      <workItem from="1750577416173" duration="1454000" />
+    </task>
+    <task id="LOCAL-00001" summary="first">
+      <option name="closed" value="true" />
+      <created>1748265453926</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1748265453926</updated>
+    </task>
+    <task id="LOCAL-00002" summary="2、加入固定时间提醒的功能和UI">
+      <option name="closed" value="true" />
+      <created>1748354544660</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1748354544660</updated>
+    </task>
+    <task id="LOCAL-00003" summary="2、加入固定时间提醒的功能和UI">
+      <option name="closed" value="true" />
+      <created>1748354601480</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1748354601480</updated>
+    </task>
+    <task id="LOCAL-00004" summary="2、加入固定时间提醒的功能和UI">
+      <option name="closed" value="true" />
+      <created>1748354757672</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1748354757672</updated>
+    </task>
+    <task id="LOCAL-00005" summary="3、加入可修改提醒标题的功能，并且用QtScheduler+QTimer 来代替 APScheduler 的调度逻辑，同时继续通过 winotify（或 plyer）来发出 Windows 原生 Toast 通知&#10;（QtScheduler（APSсheduler 的 Qt 分支）和 winotify 这类直接调用 Win32 通知的库在同一线程／同一事件循环里存在兼容性缺陷，极易造成底层 C++ 内存冲突。&#10;&#10;在不加标题之前，调用路径是很短也不常触发定时器回调，所以没碰上崩溃；一旦增添了标题输入和额外的槽函数逻辑，程序运行时对 Qt 对象的管理多了一次同步触发，就更容易触发这个深层次的栈溢出问题。&#10;）">
+      <option name="closed" value="true" />
+      <created>1748449911689</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1748449911689</updated>
+    </task>
+    <task id="LOCAL-00006" summary="4、完成了修改、删除功能&#10;&#10;在不加标题之前，调用路径是很短也不常触发定时器回调，所以没碰上崩溃；一旦增添了标题输入和额外的槽函数逻辑，程序运行时对 Qt 对象的管理多了一次同步触发，就更容易触发这个深层次的栈溢出问题。&#10;）">
+      <option name="closed" value="true" />
+      <created>1748512703138</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1748512703138</updated>
+    </task>
+    <task id="LOCAL-00007" summary="4、完成了修改、删除功能&#10;&#10;在不加标题之前，调用路径是很短也不常触发定时器回调，所以没碰上崩溃；一旦增添了标题输入和额外的槽函数逻辑，程序运行时对 Qt 对象的管理多了一次同步触发，就更容易触发这个深层次的栈溢出问题。&#10;）">
+      <option name="closed" value="true" />
+      <created>1748513915271</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1748513915271</updated>
+    </task>
+    <task id="LOCAL-00008" summary="4、完成了修改、删除功能">
+      <option name="closed" value="true" />
+      <created>1748513980212</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1748513980212</updated>
+    </task>
+    <task id="LOCAL-00009" summary="5、现在可接入SQLite进行读写">
+      <option name="closed" value="true" />
+      <created>1748613794880</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1748613794880</updated>
+    </task>
+    <task id="LOCAL-00010" summary="6、完成了系统托盘支持，开机自启功能，卸载功能（包括删除注册表）删除功能待测试、自启功能待测试。下一步考虑是否将setting内容写入json保存。以及更改项目名称相关为Memento">
+      <option name="closed" value="true" />
+      <created>1748666065504</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1748666065504</updated>
+    </task>
+    <task id="LOCAL-00011" summary="6、完成了系统托盘支持，开机自启功能，卸载功能（包括删除注册表）删除功能待测试、自启功能待测试。下一步考虑是否将setting内容写入json保存。以及更改项目名称相关为Memento">
+      <option name="closed" value="true" />
+      <created>1748666080285</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1748666080285</updated>
+    </task>
+    <task id="LOCAL-00012" summary="6、完成了系统托盘支持，开机自启功能，卸载功能（包括删除注册表）删除功能待测试、自启功能待测试。下一步考虑是否将setting内容写入json保存。以及更改项目名称相关为Memento">
+      <option name="closed" value="true" />
+      <created>1748666651551</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1748666651551</updated>
+    </task>
+    <task id="LOCAL-00013" summary="7、项目名字修改">
+      <option name="closed" value="true" />
+      <created>1748883327494</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1748883327494</updated>
+    </task>
+    <task id="LOCAL-00014" summary="7、项目名字修改">
+      <option name="closed" value="true" />
+      <created>1748883364406</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1748883364406</updated>
+    </task>
+    <task id="LOCAL-00015" summary="7、项目名字修改">
+      <option name="closed" value="true" />
+      <created>1748916660690</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1748916660690</updated>
+    </task>
+    <task id="LOCAL-00016" summary="7、项目名字修改(修复了一些小BUG)">
+      <option name="closed" value="true" />
+      <created>1749979661027</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1749979661027</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1、原型框架" />
+    <MESSAGE value="2、加入固定时间提醒的功能和UI" />
+    <MESSAGE value="3、加入可修改提醒标题的功能，并且用QtScheduler+QTimer 来代替 APScheduler 的调度逻辑，同时继续通过 winotify（或 plyer）来发出 Windows 原生 Toast 通知&#10;（QtScheduler（APSсheduler 的 Qt 分支）和 winotify 这类直接调用 Win32 通知的库在同一线程／同一事件循环里存在兼容性缺陷，极易造成底层 C++ 内存冲突。&#10;&#10;在不加标题之前，调用路径是很短也不常触发定时器回调，所以没碰上崩溃；一旦增添了标题输入和额外的槽函数逻辑，程序运行时对 Qt 对象的管理多了一次同步触发，就更容易触发这个深层次的栈溢出问题。&#10;）" />
+    <MESSAGE value="4、完成了修改、删除功能&#10;&#10;在不加标题之前，调用路径是很短也不常触发定时器回调，所以没碰上崩溃；一旦增添了标题输入和额外的槽函数逻辑，程序运行时对 Qt 对象的管理多了一次同步触发，就更容易触发这个深层次的栈溢出问题。&#10;）" />
+    <MESSAGE value="4、完成了修改、删除功能" />
+    <MESSAGE value="5、现在可接入SQLite进行读写" />
+    <MESSAGE value="6、完成了系统托盘支持，开机自启功能，卸载功能（包括删除注册表）删除功能待测试、自启功能待测试。下一步考虑是否将setting内容写入json保存。以及更改项目名称相关为Memento" />
+    <MESSAGE value="1、原型框架" />
+    <MESSAGE value="7、项目名字修改" />
+    <MESSAGE value="7、项目名字修改(修复了一些小BUG)" />
+    <option name="LAST_COMMIT_MESSAGE" value="7、项目名字修改(修复了一些小BUG)" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/reminder$tool.coverage" NAME="tool 覆盖结果" MODIFIED="1748877808667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/icon" />
+    <SUITE FILE_PATH="coverage/Memento$test_uninstall.coverage" NAME="test_uninstall 覆盖结果" MODIFIED="1749980157130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/reminder$uninstall.coverage" NAME="uninstall 覆盖结果" MODIFIED="1748665485530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/reminder$test_db.coverage" NAME="test_db 覆盖结果" MODIFIED="1748661273049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/reminder$reminder.coverage" NAME="reminder 覆盖结果" MODIFIED="1748267517935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/reminder$test_uninstall.coverage" NAME="test_uninstall 覆盖结果" MODIFIED="1748665464887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Memento$tool.coverage" NAME="tool 覆盖结果" MODIFIED="1749050199799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/icon" />
+    <SUITE FILE_PATH="coverage/reminder$test_notify__1_.coverage" NAME="test_notify (1) 覆盖结果" MODIFIED="1748612795462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/reminder$notifier.coverage" NAME="notifier 覆盖结果" MODIFIED="1748488948476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/reminder$main.coverage" NAME="main 覆盖结果" MODIFIED="1748877518538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/reminder$test_auto_start.coverage" NAME="test_auto_start 覆盖结果" MODIFIED="1748873900859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Memento$test_notify.coverage" NAME="test_notify 覆盖结果" MODIFIED="1749979161746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Memento$test_auto_start.coverage" NAME="test_auto_start 覆盖结果" MODIFIED="1749980153179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Memento$test_db.coverage" NAME="test_db 覆盖结果" MODIFIED="1749980131977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/reminder$test_notify.coverage" NAME="test_notify 覆盖结果" MODIFIED="1748872321196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Memento$main.coverage" NAME="main 覆盖结果" MODIFIED="1750578211829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
