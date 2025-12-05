@@ -1,6 +1,6 @@
 # Memento — 定时提醒工具
 
-Python 3.x 
+Python v3.13.2
 Use PyQt5 + QtScheduler+ QTimer + win10toast/plyer
 
 ## 项目说明
