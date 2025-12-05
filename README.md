@@ -7,9 +7,7 @@ Use PyQt5 + QtScheduler+ QTimer + win10toast/plyer
 
 本项目是一个用于定时提醒用户休息的工具，目标是在不打扰用户当前工作的前提下，通过 Windows 消息中心或系统托盘提醒长时间坐在电脑前的用户起身活动。项目采用 Python 开发，使用 PyQt5 构建 GUI， QTimer 实现定时任务调度，数据持久化保存至SQLite。
 
----
-
-##项目依赖（requirements.txt）
+## 项目依赖（requirements.txt）
 
 PyQt5>=5.15
 winotify>=0.2
@@ -27,8 +25,6 @@ pyinstaller main.py --name Memento --noconfirm --windowed --icon=icon/memento.ic
 - 若引入更多可自定义设置项（如通知音、界面主题等），将采用 `settings.json` 存储配置。
 - 使用Eletron替代PyQt5
 
----
-
 ## 主要功能
 
 | 功能                     | 描述                        | 
@@ -39,7 +35,7 @@ pyinstaller main.py --name Memento --noconfirm --windowed --icon=icon/memento.ic
 | 提醒任务保存读取               | 使用 SQLite 保存任务            |
 | 系统托盘支持                 | 使用 `QSystemTrayIcon` 托盘运行 |  
 
----
+## 特征
  
 1. **提醒引擎**：  
    QtScheduler + QTimer + Windows 消息中心弹窗（核心功能）
